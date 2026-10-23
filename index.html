@@ -11,23 +11,28 @@
     <div class="dashboard">
         <h1>Student Dashboard</h1>
 
-        <!-- Input fields for typing new student details -->
-        <div class="input-group">
-            <input type="text" id="nameInput" placeholder="Enter name">
-            <input type="number" id="ageInput" placeholder="Enter age">
-            <input type="text" id="courseInput" placeholder="Enter course">
-        </div>
-
         <div class="btn-container">
             <button id="showBtn">Show Students</button>
-            <button id="addBtn">Add Student</button>
+            <button id="openModalBtn">Add Student</button>
             <button id="themeBtn">Change Theme</button>
         </div>
 
         <p id="msg"></p>
 
-        <!-- Student cards will show up here -->
         <div id="studentContainer"></div>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Add New Student</h2>
+            <input type="text" id="nameInput" placeholder="Enter name">
+            <input type="number" id="ageInput" placeholder="Enter age">
+            <input type="text" id="courseInput" placeholder="Enter course">
+            <div class="modal-btns">
+                <button id="submitBtn">Add</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
