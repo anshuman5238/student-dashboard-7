@@ -1,122 +1,181 @@
-/* Normal Theme Colors */
-body {
-    background-color: #f4f7f6;
-    color: #333;
+
+  body {
+    background-color: lightgray;
+    color: black;
     font-family: Arial, sans-serif;
+    margin: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
 }
 
-/* Dashboard Box */
 .dashboard {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 450px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    width: 400px;
     text-align: center;
 }
 
 h1 {
-    margin-bottom: 20px;
-}
-
-/* Input Fields */
-.input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    font-size: 24px;
     margin-bottom: 15px;
+    color: darkblue;
 }
 
-input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
-    outline: none;
-}
-
-/* Buttons */
 .btn-container {
     margin-bottom: 15px;
 }
 
 button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
+    padding: 8px 14px;
+    margin: 4px;
     cursor: pointer;
     font-weight: bold;
     color: white;
+    border: none;
 }
 
-#showBtn { background-color: #007bff; }
-#addBtn { background-color: #28a745; }
-#themeBtn { background-color: #6f42c1; }
+#showBtn {
+    background-color: dodgerblue;
+}
+
+#openModalBtn {
+    background-color: seagreen;
+}
+
+#themeBtn {
+    background-color: purple;
+}
 
 button:hover {
     opacity: 0.8;
 }
 
-/* Status text */
 #msg {
     font-size: 14px;
-    color: #555;
+    margin: 10px 0;
+    color: dimgray;
     height: 20px;
-    margin-bottom: 15px;
 }
 
-/* Student Cards */
 .card {
-    background: #fafafa;
-    border: 1px solid #ddd;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 6px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
     text-align: left;
 }
 
 .card h3 {
     margin: 0 0 5px 0;
-    color: #007bff;
+    font-size: 18px;
+    color: darkblue;
 }
 
 .card p {
-    margin: 3px 0;
+    margin: 2px 0;
     font-size: 14px;
 }
 
-/* Dark Theme */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 18px;
+    margin-top: 0;
+    color: darkblue;
+}
+
+.modal-content input {
+    display: block;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.modal-btns {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal-btns button {
+    flex: 1;
+}
+
+#submitBtn {
+    background-color: seagreen;
+}
+
+#cancelBtn {
+    background-color: crimson;
+}
+
 body.dark {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: black;
+    color: white;
 }
 
 body.dark .dashboard {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: darkslategray;
+    border-color: white;
 }
 
-body.dark input {
-    background-color: #2a2a2a;
-    border-color: #444;
-    color: #e0e0e0;
+body.dark h1 {
+    color: lightblue;
 }
 
 body.dark .card {
-    background-color: #2a2a2a;
-    border-color: #444;
+    background-color: darkslategray;
+    border-color: white;
 }
 
 body.dark .card h3 {
-    color: #4dabf7;
+    color: lightblue;
 }
 
 body.dark #msg {
-    color: #aaa;
+    color: lightgray;
+}
+
+body.dark .modal-content {
+    background-color: darkslategray;
+    border-color: white;
+    color: white;
+}
+
+body.dark .modal-content h2 {
+    color: lightblue;
+}
+
+body.dark input {
+    background-color: black;
+    color: white;
+    border-color: white;
 }
